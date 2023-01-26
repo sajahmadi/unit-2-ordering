@@ -4,7 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        ArrayList<Drink> drinkMenu = new ArrayList<>();
+        ArrayList<Drink> drinkMenu = new ArrayList<Drink>();
         Drink water = new Drink();
         Soda soda = new Soda();
         Milk milk = new Milk();
@@ -21,16 +21,16 @@ public class Main
 
         cupcake.type();
 
-        System.out.println("How much would you like to charge for the cupcake?" +
-                "10");
+        System.out.println("How much would you like to charge for the cupcake?");
 
 
-        String priceText = input.nextLine();
+        String priceText= input.nextLine();
 
 
-        double price = Double.parseDouble(priceText);
+        // Create a double variable named price and set it equal to Double.parseDouble(priceText)
+        double price= Double.parseDouble(priceText);
 
-
+        // Now that we have the price, we can call the setPrice() method with the parameter of price on the cupcake object
         cupcake.setPrice(price);
 
 
@@ -39,8 +39,7 @@ public class Main
         redVelvet.type();
 
 
-        System.out.println("How much would you like to charge for the cupcake?" +
-                "15");
+        System.out.println("How much would you like to charge for the cupcake?");
 
 
         priceText = input.nextLine();
@@ -57,8 +56,7 @@ public class Main
         chocolate.type();
 
 
-        System.out.println("How much would you like to charge for the cupcake?" +
-                "15");
+        System.out.println("How much would you like to charge for the cupcake?");
 
 
         priceText = input.nextLine();
@@ -78,27 +76,26 @@ public class Main
         System.out.println("We are in the middle of creating the drink menu. We currently have three types of drinks on the menu but we need to decide on pricing");
         System.out.println("We are deciding on the price for our bottled water. Here is the description: ");
         water.type();
-        System.out.println("How much would you like to charge for the water bottle?"+
-                "10");
-        priceText = input.nextLine();
-        price = Double.parseDouble(priceText);
-        water.setPrice(price);
+        System.out.println("How much would you like to charge for the water bottle?");
+        String priceTextDrinks= input.nextLine();
+
+        double priceDrinks=Double.parseDouble(priceTextDrinks);
+
+        water.setPrice(priceDrinks);
 
         System.out.println("We are deciding on the price for our bottle of soda. Here is the description: ");
         soda.type();
-        System.out.println("How much would you like to charge for the bottled soda?" +
-                "10");
-        priceText = input.nextLine();
-        price = Double.parseDouble(priceText);
-        soda.setPrice(price);
+        System.out.println("How much would you like to charge for the bottled soda?");
+        priceTextDrinks = input.nextLine();
+        priceDrinks = Double.parseDouble(priceTextDrinks);
+        soda.setPrice(priceDrinks);
 
         System.out.println("We are deciding on the price for our bottle of milk. Here is the description: ");
         milk.type();
-        System.out.println("How much would you like to charge for the bottled milk?" +
-                "11");
-        priceText = input.nextLine();
-        price = Double.parseDouble(priceText);
-        milk.setPrice(price);
+        System.out.println("How much would you like to charge for the bottled milk?");
+        priceTextDrinks = input.nextLine();
+        priceDrinks = Double.parseDouble(priceTextDrinks);
+        milk.setPrice(priceDrinks);
         drinkMenu.add(water);
         drinkMenu.add(soda);
         drinkMenu.add(milk);
